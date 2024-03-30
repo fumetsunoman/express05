@@ -2,7 +2,6 @@
   "name": "express05",
   "version": "1.0.0",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "test": "nodemon index.js",
     "start": "node index.js"

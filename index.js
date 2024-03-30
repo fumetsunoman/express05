@@ -1,7 +1,9 @@
-import express from "express";
-import data1 from "./singers.json" assert{type:"json"}; //匯入json檔案需要宣告 assert 這是json格式
-console.log(data1) ;//解構賦值
-const {singers} = data1;
+const  express =  require("express");
+const {singers} = require("./singers.json");
+// import data1 from "./singers.json" assert{type:"json"}; //匯入json檔案需要宣告 assert 這是json格式
+// console.log(data1) ;//解構賦值
+// const {singers} = data1;
+
 console.log(singers);
 
 const app = express();
@@ -29,11 +31,11 @@ app.get("/singer/:id.html",(req,res) => { //.html 其實不是html檔案
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>${result.singer_html}</title>
+    <title>${result.singer_name}</title>
   </head>
   <body>
     <h1>${result.singer_html}</h1>
-    <img src="${result.singer_img}" alt="">
+    <img src="${result.singer_name}" alt="">
     
   </body>
   </html>`); //將json檔案回傳到頁面上
